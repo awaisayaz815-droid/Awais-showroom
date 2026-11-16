@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awais Toyota Showroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <img src="emblem_ogp_001.png" alt="Awais Toyota Emblem">
+        <h2>AWAIS <span>TOYOTA</span></h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#vehicles">Vehicles</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button onclick="openCart()">My Order <span1 id="count">0</span1></button>
+            <button id="themeToggle" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
+        </div>
+    </nav>
+</header>
+
+<!-- Moving Toyota Cars Gallery -->
+<div class="home-car-slider">
+    <div class="home-car-track" id="homeCarTrack"></div>
+</div>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p>WELCOME TO AWAIS TOYOTA</p>
+        <h1>Find Your Perfect <span>TOYOTA</span></h1>
+        <p>Explore our exclusive Toyota collection and find the perfect car for your journey.</p>
+        <a href="#vehicles" class="btn">Explore Vehicles</a>
+    </div>
+</section>
+
+<section class="vehicles" id="vehicles">
+    <h2>Our Toyota Collection</h2>
+    <p class="subtitle">Choose your favourite Toyota vehicle</p>
+
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search Toyota car...">
+        <select id="filter">
+            <option value="All">All Vehicles</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Pickup">Pickup</option>
+            <option value="Luxury SUV">Luxury SUV</option>
+            <option value="Van">Van</option>
+            <option value="Mini Bus">Mini Bus</option>
+            <option value="Hybrid Hatchback">Hybrid Hatchback</option>
+        </select>
+    </div>
+
+    <div class="car-container" id="carContainer"></div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Awais Toyota</h2>
+    <p>
+        Awais Toyota Showroom provides a dedicated collection
+        of Toyota vehicles. Explore different models and send
+        your vehicle enquiry directly through WhatsApp.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Interested in buying a Toyota? Contact our showroom.</p>
+    <a href="#" id="contactWhatsApp" class="btn">WhatsApp Us</a>
+</section>
+
+<footer>
+    <h3>AWAIS <span>TOYOTA</span></h3>
+    <p>© 2026 Awais Toyota Showroom. All Rights Reserved.</p>
+</footer>
+
+<!-- Order Cart -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart" id="cart">
+    <div class="cart-header">
+        <h2>My Order</h2>
+        <button onclick="closeCart()">×</button>
+    </div>
+
+    <div id="cartItems">
+        <p>Your order is empty.</p>
+    </div>
+
+    <h3>Customer Details</h3>
+
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="city" placeholder="Your City" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="order-submit">
+    BOOK NOW
+</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
